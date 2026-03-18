@@ -1,0 +1,8 @@
+site_name: SafeQuant-SLM
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - content.code.copy
+plugins:
+  - mkdocstrings
