@@ -62,3 +62,12 @@ Google TPU: Can be scaled for large-scale batch auditing on TPUs by wrapping the
 Modifying AEGIS-4 Vectors You can customize the adversarial prompts in safequant/audit.py to tailor the protocol to specific industry regulations, such as HIPAA for healthcare or PCI-DSS for financial services.
 
 License Distributed under the Apache License 2.0. See LICENSE for more information. This license provides an explicit grant of patent rights from contributors to users, ensuring long-term legal safety for enterprise implementations.
+
+
+
+## 🚀 Quick Start
+
+Install the AEGIS-4 framework directly from PyPI:
+
+```bash
+pip install safequant-slm
