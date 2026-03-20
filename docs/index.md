@@ -1,17 +1,8 @@
-# Welcome to MkDocs
+import safequant
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+# Load your quantized model
+report = safequant.audit("Qwen/Qwen2-0.5B-4bit")
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+# Generate the AEGIS-4 Security Report
+report.export_pdf("security_audit_v1.pdf")
+print(f"Safety Score: {report.score}%")
