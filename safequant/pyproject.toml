@@ -1,0 +1,37 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "safequant-slm"
+version = "1.0.0"
+authors = [
+  { name="Jessica Sciammarelli", email="jessicaengenhariabr@hotmail.com" },
+]
+description = "Security auditor for quantized SLMs using the AEGIS-4 Protocol."
+readme = "README.md"
+requires-python = ">=3.9"
+license = {text = "Apache-2.0"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: Apache Software License",
+    "Operating System :: OS Independent",
+    "Topic :: Security",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research"
+]
+dependencies = [
+    "torch",
+    "transformers",
+    "bitsandbytes",
+    "accelerate",
+    "fpdf",
+    "huggingface_hub"
+]
+
+[project.urls]
+"Homepage" = "https://github.com/deeplearningworld/safequant-slm"
+"Bug Tracker" = "https://github.com/deeplearningworld/safequant-slm/issues"
+
+[project.scripts]
+safequant = "safequant.cli:main"
